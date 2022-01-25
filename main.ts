@@ -1,7 +1,11 @@
+radio.onReceivedNumber(function (receivedNumber) {
+    serial.writeLine("Hello World!")
+})
 input.onButtonPressed(Button.A, function () {
-    serial.writeLine("do11<enter>")
+    radio.setGroup(1)
+    radio.sendNumber(1)
 })
 input.onButtonPressed(Button.B, function () {
-    serial.writeLine("do10<enter>")
+    serial.writeLine("Local Hello World!")
 })
-basic.showIcon(IconNames.Yes)
+basic.showIcon(IconNames.Square)
